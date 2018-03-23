@@ -17,6 +17,9 @@ Route::get('/', function () {
 
 Route::resource('article','ArticleController');
 
+Route::get('/rupiah/{angka}', function ($angka) {
+    return Rupiah::getRupiah($angka);
+});
  
 Auth::routes();
 
